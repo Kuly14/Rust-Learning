@@ -27,27 +27,27 @@ fn main() {
 
         wordle::check_if_won(&guess, todays_word);
 
-        let first: Vec<_> = accepted_words
-            .iter()
-            .filter(|word| word.trim() == guess.trim())
-            .collect();
+        // let first: Vec<_> = accepted_words
+        //     .iter()
+        //     .filter(|word| word.trim() == guess.trim())
+        //     .collect();
+        //
+        // let second: Vec<_> = words
+        //     .iter()
+        //     .filter(|word| word.trim() == guess.trim())
+        //     .collect();
 
-        let second: Vec<_> = words
-            .iter()
-            .filter(|word| word.trim() == guess.trim())
-            .collect();
-
-        if first.len() == 0 && second.len() == 0 {
+        if !accepted_words.contains(&guess.trim()) && !words.contains(&guess.trim()) {
             println!("That's not a real word");
             println!("Try again");
             count -= 1;
             continue;
-        }
-
+        }         
         let todays_word_chars: Vec<char> = todays_word.clone().chars().into_iter().collect();
 
         wordle::check_if_correct(&guess, &todays_word_chars);
     }
 
     println!("\nGame Over");
+    println!("The word was: {}", todays_word);
 }
