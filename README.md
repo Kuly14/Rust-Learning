@@ -9,3 +9,5 @@
 4. Jon Gjengset - https://www.youtube.com/c/JonGjengset
 
 5. Ryan Levick - https://www.youtube.com/c/RyanLevicksVideos 
+
+6. Tour Of Rust - https://tourofrust.com/
