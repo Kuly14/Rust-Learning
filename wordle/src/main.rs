@@ -11,7 +11,6 @@ fn main() {
     let words = word_list::word_list();
     let random = rand::thread_rng().gen_range(0..=words.len() - 1);
     let todays_word = words[random];
-    println!("Guess is {}", todays_word);
     let mut count = 1;
     while count < 7 {
         println!("\nGues number {}", count);
