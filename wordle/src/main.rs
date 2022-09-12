@@ -9,7 +9,7 @@ use std::io;
 fn main() {
     let accepted_words = word_list::uncommon();
     let words = word_list::word_list();
-    let random = rand::thread_rng().gen_range(0..=words.len());
+    let random = rand::thread_rng().gen_range(0..=words.len() - 1);
     let todays_word = words[random];
     println!("Guess is {}", todays_word);
     let mut count = 1;
